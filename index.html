@@ -33,7 +33,7 @@
     .tag {
       display: inline-block;
       padding: 8px 16px;
-      border-radius: 999px;
+      border-radius: 1880px;
       background: #2b1b12;
       color: white;
       font-size: 14px;
@@ -101,11 +101,62 @@
       color: #8a6a55;
       font-size: 14px;
     }
+    .banner{
+    overflow:hidden;
+    background:#111;
+    padding:18px 0;
+}
+
+.banner-track{
+    display:flex;
+    width:max-content;
+    animation:scroll 25s linear infinite;
+}
+
+.banner img{
+    width:320px;
+    height:220px;
+    object-fit:cover;
+    border-radius:18px;
+    margin:0 12px;
+    flex-shrink:0;
+}
+
+@keyframes scroll{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
+}
   </style>
 </head>
 
 <body>
+  
+<section class="banner">
 
+  <div class="banner-track">
+
+    <img src="images/1.jpg">
+    <img src="images/2.jpg">
+    <img src="images/3.jpg">
+ 
+
+    <!-- 重複一次讓它無限循環 -->
+    <img src="images/1.jpg">
+    <img src="images/2.jpg">
+    <img src="images/3.jpg">
+
+
+  </div>
+
+</section>
+  
   <section class="hero">
     <div class="card">
       <div class="tag">真空包預購中</div>
